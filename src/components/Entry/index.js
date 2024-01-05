@@ -5,7 +5,7 @@ export default function Entry({
   motto,
   notes,
   date,
-  onToggleFavorit,
+  onToggleFavorite,
   isFavorite,
   id,
 }) {
@@ -18,7 +18,7 @@ export default function Entry({
             <q>{motto}</q>
           </h2>
           <FavoriteButton
-            onToggleFavorit={onToggleFavorit}
+            onToggleFavorite={onToggleFavorite}
             isFavorite={isFavorite}
             id={id}
           />
