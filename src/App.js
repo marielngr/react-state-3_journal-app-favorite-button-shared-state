@@ -55,12 +55,20 @@ function App() {
   }
 
   function handleToggleFavorite(id) {
+    const updatedEntries = entries.map((entry) =>
+      entry.id === id ? { ...entry, isFavorite: !entry.isFavorite } : entry
+    );
+
+    setEntries(updatedEntries);
+  }
+
+  /*function handleToggleFavorite(id) {
     setEntries(
       entries.map((entry) =>
         entry.id === id ? { ...entry, isFavorite: !entry.isFavorite } : entry
-      )
+      ),
     );
-  }
+   } */
 
   return (
     <div className="app">
